@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
+/* Colors */
+$theme-colors: (
+  "primary": #1FBED2,
+  "pink": #CD0F66,
+  "blue-dark": #0C3253,
+
+  "dark": #2F3A43,
+  "light": #E0E2E3
+);
+
+$body-color: #2F3A43;
+$text-muted: #A7ABAF;
+
+/* Text Style */
+$font-family-sans-serif: 'Montserrat', sans-serif;
+
+$font-weight-semibold: 600;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
