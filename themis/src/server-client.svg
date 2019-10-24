@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="408px" height="65px" viewBox="0 0 408 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>icons</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing/Signed-Out-1" transform="translate(-529.000000, -465.000000)">
+            <g id="icons" transform="translate(529.000000, 465.000000)">
+                <g id="dots" transform="translate(161.500000, 29.000000)" fill="#FFFFFF">
+                    <circle id="Oval" cx="4" cy="3.5" r="3.5"></circle>
+                    <circle id="Oval" cx="29.5" cy="3.5" r="3.5"></circle>
+                    <circle id="Oval" cx="55" cy="3.5" r="3.5"></circle>
+                </g>
+                <g id="Server" transform="translate(0.500000, 0.000000)">
+                    <rect id="Rectangle" stroke="#FFFFFF" stroke-width="2" x="1" y="45.6186441" width="78.9268458" height="18.3813559" rx="3"></rect>
+                    <rect id="Rectangle" stroke="#FFFFFF" stroke-width="2" x="1" y="23.309322" width="78.9268458" height="18.3813559" rx="3"></rect>
+                    <rect id="Rectangle" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="78.9268458" height="18.3813559" rx="3"></rect>
+                    <ellipse id="Oval" fill="#FFFFFF" fill-rule="evenodd" cx="11.7108434" cy="10.190678" rx="1.95180723" ry="1.94029851"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" fill-rule="evenodd" cx="20.4939759" cy="10.190678" rx="1.95180723" ry="1.94029851"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" fill-rule="evenodd" cx="11.7108434" cy="32.5041108" rx="1.95180723" ry="1.94029851"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" fill-rule="evenodd" cx="20.4939759" cy="32.5041108" rx="1.95180723" ry="1.94029851"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" fill-rule="evenodd" cx="11.7108434" cy="54.8175436" rx="1.95180723" ry="1.94029851"></ellipse>
+                    <ellipse id="Oval" fill="#FFFFFF" fill-rule="evenodd" cx="20.4939759" cy="54.8175436" rx="1.95180723" ry="1.94029851"></ellipse>
+                </g>
+                <g id="laptop" transform="translate(300.977612, 0.000000)">
+                    <path d="M107.051115,59.9006734 C107.051115,62.497236 104.946185,64.6021659 102.349622,64.6021659 L5.15260725,64.6021659 C2.55604462,64.6021659 0.451114717,62.497236 0.451114717,59.9006734 L43.8791147,59.9 L43.8753654,59.9808162 L43.8753654,60.2293561 C43.8753654,60.7816408 44.3230806,61.2293561 44.8753654,61.2293561 L44.8753654,61.2293561 L62.626864,61.2293561 C63.1791488,61.2293561 63.626864,60.7816408 63.626864,60.2293561 L63.626864,60.2293561 L63.626864,59.9808162 C63.626864,59.9533734 63.6257586,59.9261889 63.6235899,59.8993047 L107.051115,59.9006734 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                    <path d="M12.5840335,53.9970427 L94.9181959,53.9970427 L94.9181959,5 C94.9181959,3.06700338 93.3511926,1.5 91.4181959,1.5 L16.0840335,1.5 C14.1510369,1.5 12.5840335,3.06700338 12.5840335,5 L12.5840335,53.9970427 Z" id="Rectangle" stroke="#FFFFFF" stroke-width="3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -8,7 +8,7 @@ $pink: #CD0F66;
 $blue-dark: #0C3253;
 
 $dark: #2F3A43;
-$light: #E0E2E3;
+$light: white;
 
 /* Text Style */
 $body-color: $primary;
@@ -16,14 +16,28 @@ $text-muted: #A7ABAF;
 
 $font-family-sans-serif: 'Montserrat', sans-serif;
 
+$font-weight-semibold: 600;
+
 .font-weight-semibold {
-  font-weight: 600;
+  font-weight: $font-weight-semibold;
 }
 
 /* Navbar */
 $navbar-dark-color: white;
 $navbar-dark-hover-color: $text-muted;
+
+$navbar-light-color: $dark;
+$navbar-light-hover-color: lighten($navbar-light-color, 20%);
+$navbar-light-active-color: $dark;
+
 $navbar-nav-link-padding-x: 1rem;
+
+/* Buttons */
+$btn-font-weight: $font-weight-semibold;
+$btn-border-radius: 0.3rem;
+
+/* Links */
+$link-hover-decoration: none;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 

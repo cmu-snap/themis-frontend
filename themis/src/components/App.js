@@ -1,15 +1,23 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Header from './Header';
+import { withRouter } from 'react-router';
+import HeaderWithRouter from './Header';
+import routerPropTypes from './routerPropTypes';
 import * as Views from '../views/index.js';
 
-function App() {
-  return (
-    <div>
-      <Header />
-      <Main />
-    </div>
-  );
+class App extends React.Component {
+  static propTypes = routerPropTypes;
+
+  render() {
+    const background = this.props.location.pathname === '/' ? 'dark' : 'light';
+
+    return (
+      <div className={'min-vh-100 bg-' + background}>
+        <HeaderWithRouter />
+        <Main />
+      </div>
+    );
+  }
 }
 
 function Main() {
@@ -27,4 +35,6 @@ function Main() {
   );
 }
 
-export default App;
+const AppWithRouter = withRouter(App);
+
+export default AppWithRouter;
