@@ -15,9 +15,9 @@ class Home extends React.Component {
           <h1 className="font-weight-bold text-white mb-4">
             A new way to measure internet fairness.
           </h1>
-          <NavLink to="/experiments">
+          <NavLink to="/about">
             <Button className={buttonStyles['padding-extra']} variant="primary">
-              Submit experiment
+              Learn more
             </Button>
           </NavLink>
         </Jumbotron>
@@ -30,10 +30,10 @@ class Home extends React.Component {
           </h4>
           <p className="text-white">
             Analyzing the diversity of CCAs today is key to understanding their impact on internet fairness.
-            Our testbed allows anyone to predict a website’s CCA and measure CCA fairness using real Internet services.
+            Our testbed allows anyone to submit experiments to predict a website’s CCA and measure CCA fairness using real Internet services.
           </p>
-          <NavLink className="font-weight-semibold mb-4" to="/about">
-            Learn more
+          <NavLink className="font-weight-semibold mb-4" to="/experiments">
+            Submit experiment
           </NavLink>
         </div>
       </Container>
