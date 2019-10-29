@@ -14,25 +14,19 @@ class App extends React.Component {
     return (
       <div className={'min-vh-100 bg-' + background}>
         <HeaderWithRouter />
-        <Main />
+        <main>
+          <Switch>
+            <Route exact path='/' component={Views.Home}/>
+            <Route path='/experiments' component={Views.Experiments}/>
+            <Route path='/results' component={Views.Results}/>
+            <Route path='/about' component={Views.About}/>
+            <Route path='/signin' component={Views.SignIn}/>
+            <Route path='/signup' component={Views.SignUp}/>
+          </Switch>
+        </main>
       </div>
     );
   }
-}
-
-function Main() {
-  return (
-    <main>
-      <Switch>
-        <Route exact path='/' component={Views.Home}/>
-        <Route path='/experiments' component={Views.Experiments}/>
-        <Route path='/results' component={Views.Results}/>
-        <Route path='/about' component={Views.About}/>
-        <Route path='/signin' component={Views.SignIn}/>
-        <Route path='/signup' component={Views.SignUp}/>
-      </Switch>
-    </main>
-  );
 }
 
 const AppWithRouter = withRouter(App);

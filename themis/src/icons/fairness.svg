@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="93px" height="89px" viewBox="0 0 93 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>fairness icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Experiments" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Choose-Experiment" transform="translate(-844.000000, -294.000000)">
+            <g id="cards" transform="translate(395.000000, 267.000000)">
+                <g id="fairness" transform="translate(340.000000, 1.500000)">
+                    <g id="fairness-icon" transform="translate(109.500000, 25.500000)">
+                        <path d="M44.6959114,-5.68434189e-14 L44.6959114,12.3693275 C26.9616832,13.0972307 12.8158677,27.1946152 12.8158677,44.4786956 C12.8158677,61.7627761 26.9616832,75.8601606 44.6959114,76.5880637 L44.6959114,88.9573912 C19.8818347,88.2229146 0,68.5902434 0,44.4786956 C0,20.3671479 19.8818347,0.734476676 44.6959114,-5.68434189e-14 Z" id="Path" fill="#CD0F66"></path>
+                        <path d="M47.5792963,2.84030333e-05 C72.3929252,0.734982654 92.2742475,20.3674586 92.2742475,44.4786956 C92.2742475,68.5899327 72.3929252,88.2224086 47.5792963,88.9573628 L47.5792963,76.5880243 C65.3130749,75.8596517 79.4583798,61.7624641 79.4583798,44.4786956 C79.4583798,27.1949271 65.3130749,13.0977395 47.5792963,12.3693669 L47.5792963,2.84030333e-05 Z" id="Path" fill="#0C3253"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

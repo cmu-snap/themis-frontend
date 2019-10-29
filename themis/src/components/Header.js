@@ -14,8 +14,8 @@ class Header extends React.Component {
     const background = this.props.location.pathname === '/' ? 'dark' : 'light';
     
     return (
-    <Navbar bg={background} expand="lg" variant={background}>
-      <NavLink to="/"><Navbar.Brand className="font-weight-semibold">Themis</Navbar.Brand></NavLink>
+    <Navbar bg={background} expand="md" variant={background} className="content">
+      <NavLink to="/"><Navbar.Brand className="font-weight-bold">Themis</Navbar.Brand></NavLink>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav>

@@ -19,7 +19,7 @@ $font-family-sans-serif: 'Montserrat', sans-serif;
 $font-weight-semibold: 600;
 
 .font-weight-semibold {
-  font-weight: $font-weight-semibold;
+  font-weight: $font-weight-semibold !important;
 }
 
 /* Navbar */
@@ -30,7 +30,7 @@ $navbar-light-color: $dark;
 $navbar-light-hover-color: lighten($navbar-light-color, 20%);
 $navbar-light-active-color: $dark;
 
-$navbar-nav-link-padding-x: 1rem;
+$navbar-nav-link-padding-x: 0.75rem;
 
 /* Buttons */
 $btn-font-weight: $font-weight-semibold;
@@ -38,6 +38,13 @@ $btn-border-radius: 0.3rem;
 
 /* Links */
 $link-hover-decoration: none;
+
+.content {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 

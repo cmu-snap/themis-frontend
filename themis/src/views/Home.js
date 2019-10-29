@@ -1,9 +1,9 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import ServerClientIcon from '../server-client.svg';
+import ServerClientIcon from '../icons/server-client.svg';
 import homeStyles from '../styles/Home.module.css';
 import buttonStyles from '../styles/Button.module.css';
 
@@ -15,11 +15,11 @@ class Home extends React.Component {
           <h1 className="font-weight-bold text-white mb-4">
             A new way to measure internet fairness.
           </h1>
-          <NavLink to="/about">
+          <Link to="/about">
             <Button className={buttonStyles['padding-extra']} variant="primary">
               Learn more
             </Button>
-          </NavLink>
+          </Link>
         </Jumbotron>
         <div className="p-3">
           <img src={ServerClientIcon} alt="Server client icon" />
@@ -32,9 +32,9 @@ class Home extends React.Component {
             Analyzing the diversity of CCAs today is key to understanding their impact on internet fairness.
             Our testbed allows anyone to submit experiments to predict a website’s CCA and measure CCA fairness using real Internet services.
           </p>
-          <NavLink className="font-weight-semibold mb-4" to="/experiments">
+          <Link className="font-weight-semibold mb-4" to="/experiments">
             Submit experiment
-          </NavLink>
+          </Link>
         </div>
       </Container>
     );

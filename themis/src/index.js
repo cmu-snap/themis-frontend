@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './styles/theme.scss';
 import './styles/index.scss';
+import './styles/open-iconic-bootstrap.css';
 import AppWithRouter from './components/App';
 import * as serviceWorker from './serviceWorker';
 

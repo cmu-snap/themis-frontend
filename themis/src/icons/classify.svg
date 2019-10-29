@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="117px" height="89px" viewBox="0 0 117 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>classify icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Experiments" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Choose-Experiment" transform="translate(-492.000000, -293.000000)">
+            <g id="cards" transform="translate(395.000000, 267.000000)">
+                <g id="classification" transform="translate(0.000000, 0.500000)">
+                    <g id="classify-icon" transform="translate(96.421405, 25.500000)">
+                        <ellipse id="Oval" fill="#CD0F66" cx="61.3116807" cy="22.8132911" rx="22.77291" ry="21.9683544"></ellipse>
+                        <ellipse id="Oval" fill="#0C3253" cx="98.3906494" cy="70.693038" rx="18.3935042" ry="17.7436709"></ellipse>
+                        <ellipse id="Oval" fill="#1FBED2" cx="12.2623361" cy="52.9493671" rx="11.6784154" ry="11.2658228"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

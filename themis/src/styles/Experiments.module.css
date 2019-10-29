@@ -1,0 +1,14 @@
+.card-md {
+  width: 18rem;
+}
+
+.card-img {
+  max-height: 105px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1.25rem;
+}
+
+.card-md:hover {
+  border: 1px solid var(--primary);
+}
