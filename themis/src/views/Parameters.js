@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Yup from 'yup';
-import { useParams } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { Formik, Form as FormikForm, ErrorMessage } from 'formik';
 import { TextInput, Checkbox } from '../components/Form';
 import Form from 'react-bootstrap/Form';
@@ -32,37 +32,36 @@ class Parameters extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      isReviewing: false,
-      website: '',
-      file: '',
-      btlbw: 10,
-      rtt: 75,
-      ccas: ['bbr', 'cubic', 'reno'],
-      email: '',
-    };
+    this.state = { 'email': null };
   }
 
-  setParameters(parameters) {
-    this.setState(parameters);
+  handleSubmit(email) {
+    this.setState({ 'email': email });
   }
 
   render(props) {
-    if (this.state.isReviewing) {
-      // return (
-
-      // );
+    if (this.state.email) {
+      return (
+        <div className={'d-flex flex-column align-items-center content ' + styles.form}>
+          <h4 className="text-center mb-4">Thanks for submitting!</h4>
+          <p className="text-center mb-4">
+            Your experiment has entered the experiment queue. We will send any
+            updates about your experiment to
+            <span className="font-weight-semibold"> {this.state.email}</span>.
+          </p>
+          <Link to='/experiments' className="font-weight-semibold">
+            Submit another experiment
+          </Link>
+        </div>
+      )
     }
     return (
       <div className={'content ' + styles.form}>
-        <h4 className="text-center">Parameters</h4>
+        <h4 className="text-center mb-4">Enter parameters</h4>
         <Formik
         validationSchema={Parameters.schema}
         onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
+          this.handleSubmit(values['email']);
         }}
         initialValues={{
           website: '',
@@ -71,7 +70,7 @@ class Parameters extends React.Component {
           email: ''
         }}>
         { this.props.match.params['experimentType'] === 'fairness' ?
-          <FormikForm className="pt-3">
+          <FormikForm>
             <Form.Row>
               <Form.Group as={Col}>
                 <TextInput label="Website" name="website" type="text" />
@@ -91,7 +90,7 @@ class Parameters extends React.Component {
                 </small>
               </Form.Group>
             </Form.Row>
-            <Form.Row>
+            <Form.Row className="mb-3">
               <Form.Group as={Col} md="6">
                 <TextInput label="Email address" name="email" type="email" />
                 <Form.Text className="text-muted">
@@ -101,7 +100,9 @@ class Parameters extends React.Component {
             </Form.Row>
             <Form.Row>
               <Form.Group as={Col} md="2" className="mr-auto">
-                <Button variant="primary" block>Back</Button>
+                <Link to='/experiments'>
+                  <Button variant="primary" block>Back</Button>
+                </Link>
               </Form.Group>
               <Form.Group as={Col} md="2" className="ml-auto">
                 <Button variant="primary" type="submit" block>Next</Button>

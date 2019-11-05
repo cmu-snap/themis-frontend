@@ -8,9 +8,9 @@ import styles from '../styles/Experiments.module.css'
 class SubmitExperiment extends React.Component {
   render(props) {
     return (
-      <div className="d-flex flex-column align-items-center p-3">
-        <h4 className="text-dark">Choose an experiment</h4>
-        <div className="d-flex justify-items-center p-4">
+      <div className="d-flex flex-column align-items-center content">
+        <h4 className="text-dark mb-4">Choose an experiment</h4>
+        <div className="d-flex justify-items-center mb-4">
           <Link to='/experiments/classification'>
             <Card className={`h-100 text-center mr-3 ${styles['card-md']}`} text="dark">
               <Card.Img

@@ -32,7 +32,7 @@ class Home extends React.Component {
             Analyzing the diversity of CCAs today is key to understanding their impact on internet fairness.
             Our testbed allows anyone to submit experiments to predict a website’s CCA and measure CCA fairness using real Internet services.
           </p>
-          <Link className="font-weight-semibold mb-4" to="/experiments">
+          <Link className="font-weight-semibold" to="/experiments">
             Submit experiment
           </Link>
         </div>
