@@ -13,15 +13,9 @@ class Experiments extends React.Component {
 
   static propTypes = routerPropTypes;
 
-  handleExperimentClick(type) {
-    this.setState({
-      experimentType: Experiments.experimentTypes[type],
-    });
-  }
-
   render() {
     let header;
-    const re = new RegExp(`${this.props.match.path}\/(.*)`);
+    const re = new RegExp(`${this.props.match.path}/(.*)`);
     const match = re.exec(this.props.location.pathname);
     if (match) {
       header = (
@@ -45,9 +39,7 @@ class Experiments extends React.Component {
           {header}
         </div>
         <Switch>
-          <Route exact path={this.props.match.path}
-            children={<SubmitExperiment onExperimentClick={(t) => this.handleExperimentClick(t)}/>}
-          />
+          <Route exact path={this.props.match.path} component={SubmitExperiment} />
           <Route path={`${this.props.match.path}/:experimentType`} component={Parameters}/>
         </Switch>
       </>

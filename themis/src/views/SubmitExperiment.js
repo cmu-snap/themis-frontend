@@ -11,9 +11,7 @@ class SubmitExperiment extends React.Component {
       <div className="d-flex flex-column align-items-center p-3">
         <h4 className="text-dark">Choose an experiment</h4>
         <div className="d-flex justify-items-center p-4">
-          <Link
-            to='/experiments/classification'
-            onClick={() => this.props.onExperimentClick('classification')}>
+          <Link to='/experiments/classification'>
             <Card className={`h-100 text-center mr-3 ${styles['card-md']}`} text="dark">
               <Card.Img
                 variant="top"
@@ -29,9 +27,7 @@ class SubmitExperiment extends React.Component {
             </Card>
           </Link>
 
-          <Link
-            to='/experiments/fairness'
-            onClick={() => this.props.onExperimentClick('fairness')}>
+          <Link to='/experiments/fairness'>
             <Card className={`h-100 text-center ml-3 ${styles['card-md']}`} text="dark">
               <Card.Img
                 variant="top"
