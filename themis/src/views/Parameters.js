@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Yup from 'yup';
-import { Link, withRouter } from 'react-router-dom';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { Formik, Form as FormikForm, ErrorMessage } from 'formik';
 import { TextInput, Checkbox } from '../components/Form';
 import Form from 'react-bootstrap/Form';
@@ -35,8 +36,16 @@ class Parameters extends React.Component {
     this.state = { 'email': null };
   }
 
-  handleSubmit(email) {
-    this.setState({ 'email': email });
+  handleSubmit(values) {
+    this.setState({ 'email': values['email'] });
+    values['experimentType'] = 'fairness';
+    axios.post('http://localhost:9000/experiments/submit', values)
+      .then(res => {
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   render(props) {
@@ -61,7 +70,7 @@ class Parameters extends React.Component {
         <Formik
         validationSchema={Parameters.schema}
         onSubmit={(values, { setSubmitting }) => {
-          this.handleSubmit(values['email']);
+          this.handleSubmit(values);
         }}
         initialValues={{
           website: '',
