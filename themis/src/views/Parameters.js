@@ -75,7 +75,7 @@ class Parameters extends React.Component {
         initialValues={{
           website: '',
           file: '',
-          ccas: ['bbr', 'cubic', 'reno'],
+          ccas: ['BBR', 'Cubic', 'Reno'],
           email: ''
         }}>
         { this.props.match.params['experimentType'] === 'fairness' ?
@@ -91,9 +91,9 @@ class Parameters extends React.Component {
             <Form.Row>
               <Form.Group as={Col}>
                 <label className="font-weight-semibold">Competing CCAs</label>
-                <Checkbox label="BBR" name="ccas" value="bbr" />
-                <Checkbox label="Cubic" name="ccas" value="cubic" />
-                <Checkbox label="Reno" name="ccas" value="reno" />
+                <Checkbox label="BBR" name="ccas" value="BBR" />
+                <Checkbox label="Cubic" name="ccas" value="Cubic" />
+                <Checkbox label="Reno" name="ccas" value="Reno" />
                 <small className="text-danger">
                   <ErrorMessage name="ccas" />
                 </small>
