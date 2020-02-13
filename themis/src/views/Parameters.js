@@ -17,19 +17,24 @@ class Parameters extends React.Component {
     return valid1 || valid2;
   };
   
-  static schema = Yup.object({
-      website: Yup.string()
-        .required('Website is a required field.')
-        .test('URL Test', 'Please provide a valid website.', Parameters.urlValidator),
-      file: Yup.string()
-        .required('File URL is a required field.')
-        .test('URL Test', 'Please provide a valid URL.', Parameters.urlValidator),
-      ccas: Yup.array()
-        .required('Please choose at least one competing CCA.'),
-      email: Yup.string()
-        .email('Please provide a valid email address.')
-        .required('Email is a required field.')
+  static baseSchema = Yup.object({
+    website: Yup.string()
+      .required('Website is a required field.')
+      .test('URL Test', 'Please provide a valid website.', Parameters.urlValidator),
+    file: Yup.string()
+      .required('File URL is a required field.')
+      .test('URL Test', 'Please provide a valid URL.', Parameters.urlValidator),
+    email: Yup.string()
+      .email('Please provide a valid email address.')
+      .required('Email is a required field.')
   });
+
+  static schemas = {
+    'fairness': Parameters.baseSchema.shape({
+      ccas: Yup.array().required('Please choose at least one competing CCA.'),
+    }),
+    'classification': Parameters.baseSchema,
+  };;
 
   constructor(props) {
     super(props);
@@ -38,7 +43,7 @@ class Parameters extends React.Component {
 
   handleSubmit(values) {
     this.setState({ 'email': values['email'] });
-    values['experimentType'] = 'fairness';
+    values['experimentType'] = this.props.match.params['experimentType'];
     axios.post('http://localhost:9000/experiments/submit', values)
       .then(res => {
         console.log(res.data);
@@ -68,17 +73,16 @@ class Parameters extends React.Component {
       <div className={'content ' + styles.form}>
         <h4 className="text-center mb-4">Enter parameters</h4>
         <Formik
-        validationSchema={Parameters.schema}
+        validationSchema={Parameters.schemas[this.props.match.params['experimentType']]}
         onSubmit={(values, { setSubmitting }) => {
           this.handleSubmit(values);
         }}
         initialValues={{
           website: '',
           file: '',
-          ccas: ['BBR', 'Cubic', 'Reno'],
+          ccas: this.props.match.params['experimentType'] === 'fairness' ? ['BBR', 'Cubic', 'Reno'] : null,
           email: ''
         }}>
-        { this.props.match.params['experimentType'] === 'fairness' ?
           <FormikForm>
             <Form.Row>
               <Form.Group as={Col}>
@@ -88,6 +92,7 @@ class Parameters extends React.Component {
                 <TextInput label="File URL" name="file" type="text" />
               </Form.Group>
             </Form.Row>
+            { this.props.match.params['experimentType'] === 'fairness' ?
             <Form.Row>
               <Form.Group as={Col}>
                 <label className="font-weight-semibold">Competing CCAs</label>
@@ -99,6 +104,7 @@ class Parameters extends React.Component {
                 </small>
               </Form.Group>
             </Form.Row>
+            : null }
             <Form.Row className="mb-3">
               <Form.Group as={Col} md="6">
                 <TextInput label="Email address" name="email" type="email" />
@@ -118,7 +124,6 @@ class Parameters extends React.Component {
               </Form.Group>
             </Form.Row>
           </FormikForm>
-        : null}
         </Formik>
       </div>
     );
